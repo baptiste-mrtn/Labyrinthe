@@ -75,13 +75,13 @@ function createLab(laby, taille, type) {
     }
 
     for (let i = 0; i < wall.length; i++) {
-      if (i === 0 && wall[0] === true) {
+      if (i === 0 && wall[0]) {
         div.style.borderTop = "2px solid red";
-      } else if (i === 1 && wall[1] === true) {
+      } else if (i === 1 && wall[1]) {
         div.style.borderRight = "2px solid red";
-      } else if (i === 2 && wall[2] === true) {
+      } else if (i === 2 && wall[2]) {
         div.style.borderBottom = "2px solid red";
-      } else if (i === 3 && wall[3] === true) {
+      } else if (i === 3 && wall[3]) {
         div.style.borderLeft = "2px solid red";
       }
     }
@@ -218,4 +218,11 @@ async function start_dfs() {
 async function start_bfs() {
   await delay(500);
   await bfs_iteratif(tab, startposition);
+}
+
+
+// WIN
+
+function win(){
+
 }
