@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+  <title>Labyrinthe</title>
+</head>
+
+<body>
+  <div class="titre">
+    <h1>Labyrinthe</h1>
+    <img class="katana" src="img/katana.png" alt="katana">
+  </div>
+  <div class="selections">
+    <div class="selection">
+      <label id="tailleLab" for="choixTailleLab">Choisir la taille du labyrinthe : </label>
+      <select id="choixTailleLab">
+      </select>
+    </div>
+    <button type="submit" name="button" id="submit" action="#">Accepter</button>
+    <div class="selection">
+      <label id="typeLab" for="choixTypeLab">Choisir le type de labyrinthe : </label>
+      <select id="choixTypeLab">
+      </select>
+    </div>
+  </div>
+  <div class="boutons">
+    <button class="start" onclick="start_dfs()">Solution en DFS</button>
+    <button class="start" onclick="start_bfs()">Solution en BFS</button>
+  </div>
+  <div class="lab">
+    <div class="wrap">
+      <div class="grid" id="grid">
+      </div>
+    </div>
+  </div>
+  <div class="del">
+
+  </div>
+  <script src="js/lab.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

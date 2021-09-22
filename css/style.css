@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Cinzel', serif;
+}
+
+body {
+  background-image: url("../img/dark_wood.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  font-family: 'Cinzel', serif;
+}
+
+.titre {
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid white;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.titre h1 {
+  font-size: 50px;
+  font-weight: lighter;
+}
+
+.titre img {
+
+}
+
+select {
+  color: white;
+  background-color: black;
+  border: 1px solid red;
+  font-size: 15px;
+}
+
+.lab {
+  margin: 50px 0;
+}
+
+.wrap {
+  display: flex;
+}
+
+.grid {
+  margin: 0 auto;
+  display: grid;
+  padding: 50px;
+  background-color: rgba(245, 3, 3, 0.25);
+}
+
+.grid-item {
+  border-color: white;
+  background-color: black;
+  text-align: center;
+  align-items: center;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 17px 0 0 -4px;
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.boutons {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.start {
+  padding: 10px 15px;
+  border: none;
+  color: #ffffff;
+  background-color: red;
+  text-align: center;
+  font-size: 20px;
+  transition: 1s;
+}
+
+.del {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.start:hover {
+  box-shadow: inset 0px 0px 10px 3px #000000;
+}
+
+.selections {
+  margin: 0 auto 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selections button {
+  padding: 25px;
+  text-align: center;
+  background: none;
+  border: none;
+  color: #fff;
+  font-variant: small-caps;
+  font-size: 20px;
+  font-family: 'Cinzel', serif;
+}
+
+.selections button:hover {
+  text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red, 0 0 50px red, 0 0 60px red, 0 0 70px red;
+}
+
+.selection {
+  width: 48%;
+  margin: 0 auto;
+  text-align: center;
+  border: 20px solid #000;
+  border-top: 15px double red;
+  border-bottom: 15px double red;
+  color: #ffffff;
+  padding: 25px 0;
+  box-shadow: inset 0px 0px 10px 3px red;
+  box-shadow: 0px 0px 10px 3px red;
+}
