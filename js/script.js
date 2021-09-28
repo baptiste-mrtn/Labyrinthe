@@ -92,7 +92,7 @@ function createLab(laby, taille, type) {
 
 // Enlever le labyrinthe (pour en mettre un nouveau)
 
-function deleteLab(){
+function deleteLab() {
   $('.grid-item').remove();
   $('#oops').remove();
 }
@@ -135,13 +135,21 @@ async function bfs_iteratif(lab, start) {
 
   while (stack.length != 0) {
     let n = stack.shift();
-    lab.chemins.push(n);
     n.visited = true;
     await delay(100);
     createPion(n);
 
     if (n === finish) {
       console.log("Gagné");
+
+      while (n.parent != undefined) {
+        lab.chemins.push(n);
+
+        // n = n.parent;
+        n = lab.find(el => el.posX === n.parent.posX && el.posY === n.parent.posY);
+        document.getElementById('x'+ n.posX + 'y' + n.posY).style.backgroundColor="#365837";
+        console.log(lab.chemins);
+      }
       return lab.chemins;
     }
     for (let w of get_neighbors(tab, n.posX, n.posY)) {
@@ -164,17 +172,24 @@ function get_neighbors(lab, x, y) {
   let wall = getCell(lab, x, y).walls;
 
   if (!wall[0]) {
+    // getCell(lab, x, y - 1).parent = position;
     voisins.push(getCell(lab, x, y - 1));
   }
   if (!wall[1]) {
+    // getCell(lab, x + 1, y).parent = position;
     voisins.push(getCell(lab, x + 1, y));
   }
   if (!wall[2]) {
+    // getCell(lab, x, y + 1).parent = position;
     voisins.push(getCell(lab, x, y + 1));
   }
   if (!wall[3]) {
+    // getCell(lab, x - 1, y).parent = position;
     voisins.push(getCell(lab, x - 1, y));
   }
+  voisins.forEach(v => v.parent = position));
+
+  console.log(voisins);
   return voisins;
 }
 
@@ -223,6 +238,6 @@ async function start_bfs() {
 
 // WIN
 
-function win(){
+function win() {
 
 }
