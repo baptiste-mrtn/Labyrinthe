@@ -187,7 +187,7 @@ function get_neighbors(lab, x, y) {
     // getCell(lab, x - 1, y).parent = position;
     voisins.push(getCell(lab, x - 1, y));
   }
-  voisins.forEach(v => v.parent = position));
+  voisins.forEach(v => v.parent = position);
 
   console.log(voisins);
   return voisins;
